@@ -1,0 +1,17 @@
+.keyboardWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.whiteKeyWrapper {
+    height: 16rem;
+    width: 6rem;
+}
+
+.blackKeyWrapper {
+    height: 8rem;
+    width: 4rem;
+    z-index: 999;
+    margin-left: -2rem;
+    margin-right: -2rem;
+}

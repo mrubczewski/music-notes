@@ -2,6 +2,7 @@ import styles from './GuitarString.module.css'
 import { range } from '@/utils/range'
 import GuitarStringFret from '@/components/GuitarStringFret/GuitarStringFret'
 import { NOTES_SHARP } from '@/consts/Notes'
+import { shiftNotes } from '@/utils/shiftNotes'
 
 interface Props {
     startNote: string
@@ -12,13 +13,8 @@ export default function GuitarString({ startNote, numberOfFrets }: Props) {
     const startNotesIndex = NOTES_SHARP.findIndex(
         (value) => value === startNote
     )
-    const stringNotes = [...NOTES_SHARP]
-    for (let i = 0; i < startNotesIndex; i++) {
-        const noteToShift = stringNotes.shift()
-        if (noteToShift) stringNotes.push(noteToShift)
-    }
+    const stringNotes = shiftNotes(NOTES_SHARP, startNotesIndex)
 
-    console.log('string', startNote, stringNotes)
     return (
         <div className={styles.stringWrapper}>
             {range(0, numberOfFrets).map((index) => {
