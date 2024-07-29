@@ -1,0 +1,23 @@
+.fretboardWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.guitarStringsWrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+.fretIndicator {
+    display: flex;
+    flex-direction: row;
+}
+
+.indicator {
+    width: 4rem;
+    height: 4rem;
+}

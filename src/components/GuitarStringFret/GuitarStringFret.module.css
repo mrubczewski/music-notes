@@ -1,0 +1,16 @@
+.stringFretWrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.stringFret {
+    height: 90%;
+    width: 90%;
+    border: 1px solid white;
+    border-radius: 16px;
+    cursor: pointer;
+
+    &:hover {
+        background: darkslategray;
+    }
+}
